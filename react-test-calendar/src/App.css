@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  width: 70vw;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  color: #eee;
+  min-height: 10vh;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+table {
+  display: flex;
+}
+
+div.cal {
+  width: 50%;
+}
+
+div.todo {
+  width: 50%;
+}
