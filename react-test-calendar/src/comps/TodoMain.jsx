@@ -1,15 +1,13 @@
 import TodoInput from "./TodoInput";
 import { useState, useEffect } from "react";
-import "../css/Todo.css"
+import "../css/Todo.css";
 
 import { initData } from "../data/initData";
 
 import uuid from "react-uuid";
 import TodoList from "./TodoList";
 
-
 const TodoMain = () => {
- 
   const [todo, setTodo] = useState(() => initData());
   const [todoList, setTodoList] = useState(() => {
     return localStorage.getItem("TODOLIST")
@@ -42,8 +40,7 @@ const TodoMain = () => {
   };
 
   const itemDelete = (id) => {
-    if (window.confirm("정말 삭제 할거야?")) {
-
+    if (window.confirm("삭제할까요??")) {
       const deleteTodoList = todoList.filter((item) => {
         return item.id !== id;
       });
