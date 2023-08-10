@@ -4,7 +4,7 @@ import Fotter from "../comps/Fotter"
 import { useState } from "react"
 import List from "./List";
 
-function ControlList(props) {
+function Main(props) {
 
     const [ListDatas,SetListDatas] = useState([
         {id:0,
@@ -51,4 +51,4 @@ function ControlList(props) {
     )
 
 }
-export default ControlList
+export default Main

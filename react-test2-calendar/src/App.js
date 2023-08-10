@@ -1,6 +1,6 @@
 import MyCalendar from "./comps/MyCalendar";
 import "./App.css";
-import ControlList from "./comps/ControlList"
+import Main from "./comps/Main"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       </header>
       <table>
         <div class="todo">
-          <ControlList />
+          <Main />
         </div>
       </table>
     </div>
