@@ -1,9 +1,7 @@
 import TodoInput from "./TodoInput";
 import { useState, useEffect } from "react";
 import "../css/Todo.css";
-
 import { initData } from "../data/initData";
-
 import uuid from "react-uuid";
 import TodoList from "./TodoList";
 
@@ -68,6 +66,7 @@ const TodoMain = () => {
       setTodoList(updateTodoList);
     }
   };
+
 
   return (
     <div className="todo">
