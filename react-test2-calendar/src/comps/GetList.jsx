@@ -1,11 +1,16 @@
 import React from "react";
+import "../css/GetList.css";
 
 function GetList(props) {
-    return (
-        <div>
-            <input type="text" placeholder="뭐필요하니?" onKeyUp={props.Addlist}/>
-            <button>추가?</button>
-        </div>
-    )
+  return (
+    <div>
+      <input
+        className="input"
+        type="text"
+        placeholder="추가할 내용을 적은 후에 Enter"
+        onKeyUp={props.Addlist}
+      />
+    </div>
+  );
 }
-export default GetList
+export default GetList;
