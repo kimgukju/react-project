@@ -3,16 +3,15 @@ import { useState } from "react";
 import List from "./List";
 
 function Main(props) {
-  var days = props.Days;
-  var Month = props.Month;
+  const days = props.Days;
+  const Month = props.Month;
 
   const [ListDatas, SetListDatas] = useState([
     { id: 0, text: "HI", clear: false, show: true, day: "8/10" },
     { id: 1, text: "빈둥빈둥", clear: false, show: true, day: "8/10" },
   ]);
 
-  var list;
-  list = ListDatas.map((info) => (
+  const list = ListDatas.map((info) => (
     <List key={info.id} state={info} deletelist={deletelist} />
   ));
   let id = 2;
@@ -22,12 +21,12 @@ function Main(props) {
     if (event.keyCode != 13 || value == "") return;
 
     event.target.value = "";
-    var date = new Date();
-    var day = date.getMonth() + 1 + "/" + date.getDate();
+    const date = new Date();
+    const day = date.getMonth() + 1 + "/" + date.getDate();
     SetListDatas(
       ListDatas.concat({
         id: id++,
-        text: value + "//" + Month + "월" + days + "일",
+        text: value + "//" + Month + "월" + days + "일", // 일단은 셀렉한 값 월,일 불러보려고
         // text: value,
         clear: false,
         month: Month,

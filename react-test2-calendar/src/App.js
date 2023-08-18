@@ -4,7 +4,7 @@ import { useState } from "react";
 import MyCalendar from "./comps/MyCalendar";
 
 function App() {
-  var date = new Date();
+  const date = new Date();
   const [Month, setMonth] = useState(date.getMonth() + 1);
   const [Day, setDay] = useState(date.getDate());
 
