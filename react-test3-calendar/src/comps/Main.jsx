@@ -1,6 +1,7 @@
 import GetList from "../comps/GetList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import List from "./List";
+import localforage from "localforage";
 
 function Main(props) {
   const days = props.Days;
@@ -11,13 +12,28 @@ function Main(props) {
     { id: 1, text: "빈둥빈둥", clear: false, show: true, day: "8/10" },
   ]);
 
+  // 8.18일 배운 localforage 적용해보기
+  useEffect(() => {
+    const setForage = async () => {
+      await localforage.setItem("MEMO", ListDatas);
+    };
+    setForage();
+  }, [ListDatas]);
+
+  useEffect(() => {
+    const getForage = async () => {
+      SetListDatas(await localforage.getItem("MEMO"));
+    };
+    getForage();
+  }, []);
+
   const list = ListDatas.map((info) => (
     <List key={info.id} state={info} deletelist={deletelist} />
   ));
   let id = 2;
 
   function Addlist(event) {
-    var value = event.target.value;
+    const value = event.target.value;
     if (event.keyCode != 13 || value == "") return;
 
     event.target.value = "";
