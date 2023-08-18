@@ -1,5 +1,4 @@
 import GetList from "../comps/GetList";
-import Fotter from "../comps/Fotter";
 import { useState } from "react";
 import List from "./List";
 
@@ -53,7 +52,6 @@ function Main(props) {
       <GetList Addlist={Addlist} />
       <div>{list}</div>
       {/* <List /> */}
-      <Fotter />
     </div>
   );
 }
