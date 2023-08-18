@@ -2,5 +2,8 @@
 
 # 설치한 npm
 
--`npm install react-calendar` -`npm install react-uuid` -`npm install moment`  
+-`npm install react-calendar` 
+-`npm install moment`  
 -`npm install localforage`
+
+최근 Calendar -> test3
